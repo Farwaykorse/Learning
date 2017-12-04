@@ -46,7 +46,7 @@ Notes taken while learning C++.
 - [Compiler Explorer - C++](https://gcc.godbolt.org/)  
 - [Compiler support overview](http://en.cppreference.com/w/cpp/compiler_support)
 
-### Channels
+### Audio and Video Channels
 - [CppCast](http://cppcast.com/)  
 - [C++ Weekly by Jason Turner]
 - [CppCon]
