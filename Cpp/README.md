@@ -16,7 +16,7 @@ Notes taken while learning C++.
 - [Language]
   - [const]
   - [Free functions]
-- [Exceptions]
+- [Exceptions](exceptions.md)
 - [STL Algorithms]
 - [Splitting over multiple files]
   - [Circular dependencies and Forward Declaration Headers]
