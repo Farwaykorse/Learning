@@ -19,7 +19,7 @@ Notes taken while learning C++.
 - [Exceptions](exceptions.md)
 - [STL Algorithms]
 - [Splitting over multiple files]
-  - [Circular dependencies and Forward Declaration Headers]
+  - [Circular dependencies and Forward Declaration Headers](fwd-headers.md)
 - [Unit Testing]
 - [Libraries]
 - [Compiler configuration]
