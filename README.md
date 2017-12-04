@@ -15,8 +15,8 @@ change and in potential anything could be added to this.
 - [Content](#content)  
 - [File Organization and Formatting](#organize)  
 - [Commit Strategy](#commits)  
-<!-- - [Contributing](#contributing)  -->
-<!-- - [License](#license)  -->
+- [Contributing](#contributing)  
+- [License](#license)  
 
 <!---------------------------------------------------------><a id="content"></a>
 ## Content
@@ -112,8 +112,8 @@ Commits are cherry-picked and collated from the other branches.
 Partial documents and first ideas can all go into the `latest` branch.  
 It is a branch allowing for rough drafts, todo's and polishing.
 Changes are commited and pushed often, serving as remote backups.  
-**Try** for once change per commit, to reduce conflicts. Single typo commits are
-fine. Expect a a messy history.  
+**Try** for once change per commit, to reduce conflicts.
+Single typo commits are fine. Expect a a messy history.  
 **Rewriting history is NOT allowed!** To support use on multiple machines.
 
 ### Other branches
@@ -124,17 +124,26 @@ branches and for experimentation.
 Potentially the `latest` and `master` branch might be deprecated and replaced
 with cleaner versions.
 These will use a different name.
-This would break tracking branches loose, but shouldn't break the history.
+This would break loose any tracking branches, but shouldn't break the history.
 Depending on the motivation the deprecated versions might be removed from
 the public repository.
 
 <!----------------------------------------------------><a id="contributing"></a>
-<!-- Contributing -->
+## Contributing
 <!----------------------------------------------------------------------------->
+The purpose of these notes is to provide reflection while learning and a future
+reference to reuse and improve.
+
+Any questions, idea's, criticism, etc. are welcome.
+Through tickets, pull-requests or any other type of communication.
+Just be aware, that no promisses are made about acception, anwering or retaining
+the provided content.
 
 <!---------------------------------------------------------><a id="license"></a>
-<!-- License -->
+## License
 <!----------------------------------------------------------------------------->
+To be decided.  
+Until stated otherwise, all rights are reserved.
 
 -----------
 [top](#top)
