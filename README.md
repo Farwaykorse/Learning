@@ -1,5 +1,5 @@
 <!-------------------------------------------------------------><a id="top"></a>
-# Notes on Programming (...), notes
+# Notes on Programming (...)
 <!----------------------------------------------------------------------------->
 
 <!-- introduction -->
@@ -26,7 +26,7 @@ change and in potential anything could be added to this.
 - [git](./git/README.md)  
 
 
-<!------------------------------------------------------><a id="organize"></a>
+<!--------------------------------------------------------><a id="organize"></a>
 ## File Organization and Formatting
 <!----------------------------------------------------------------------------->
 ### Directory Structure
@@ -100,21 +100,39 @@ content, move it to its own page and link to it.
 [top](#top)
 ````
 
-<!--------------------------------------------------------><a id="commits"></a>
+<!---------------------------------------------------------><a id="commits"></a>
 ## Commit strategy
 <!----------------------------------------------------------------------------->
-**Master branch**  
-Clean versions go into the master branch and are displayed online.
+### Master branch
+Clean versions go into the `master` branch and are displayed online.  
+Commits are cherry-picked and collated from the other branches.  
+**Rewriting history is NOT allowed!**
 
-**Other branches**  
-Changes go into working branches and are commited and pushed often, as remote
-backups.
+### Latest branch
+Partial documents and first ideas can all go into the `latest` branch.  
+It is a branch allowing for rough drafts, todo's and polishing.
+Changes are commited and pushed often, serving as remote backups.  
+**Try** for once change per commit, to reduce conflicts. Single typo commits are
+fine. Expect a a messy history.  
+**Rewriting history is NOT allowed!** To support use on multiple machines.
+
+### Other branches
+All other branches are concidered unstable. These can be used as intermediate
+branches and for experimentation.
+
+### Breaking history
+Potentially the `latest` and `master` branch might be deprecated and replaced
+with cleaner versions.
+These will use a different name.
+This would break tracking branches loose, but shouldn't break the history.
+Depending on the motivation the deprecated versions might be removed from
+the public repository.
 
 <!----------------------------------------------------><a id="contributing"></a>
 <!-- Contributing -->
 <!----------------------------------------------------------------------------->
 
-<!--------------------------------------------------------><a id="license"></a>
+<!---------------------------------------------------------><a id="license"></a>
 <!-- License -->
 <!----------------------------------------------------------------------------->
 
