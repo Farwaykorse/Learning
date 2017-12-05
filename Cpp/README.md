@@ -60,9 +60,6 @@ Notes taken while learning C++.
 - [Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/)  
 - []
 
-<!----------------------------------------------------------><a id="sub_id"></a>
-<!-- ### Sub_name-->
-<!-- more content -->
 
 -----------
 [top](#top)
