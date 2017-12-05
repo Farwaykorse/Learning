@@ -35,12 +35,14 @@ Notes taken while learning C++.
 - [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/)  
 
 ### Courses
-<!-- mda -->
+- [MVA - C++: A General Purpose Language and Library Jump Start](https://mva.microsoft.com/en-US/training-courses/c-a-general-purpose-language-and-library-jump-start-8251)  
+  By Kat Gregory and James McNellis. It's a little older (2013) but a really
+  course to start with.
 <!-- edx (?) -->
 
 ### Community
 - [reddit/r/cpp](https://www.reddit.com/r/cpp/)  
-- [Slack]
+- [Slack](https://cpplang.slack.com/)
 
 ### Online Tools
 - [Compiler Explorer - C++](https://gcc.godbolt.org/)  
@@ -48,10 +50,11 @@ Notes taken while learning C++.
 
 ### Audio and Video Channels
 - [CppCast](http://cppcast.com/)  
-- [C++ Weekly by Jason Turner]
-- [CppCon]
-- [BoostCon]
-- [MeetingC++]
+- [C++ Weekly by Jason Turner](https://www.youtube.com/playlist?list=PLs3KjaCtOwSZ2tbuV1hx8Xz-rFZTan2J1)
+- [CppCon](https://www.youtube.com/channel/UCMlGfpWw-RUdWX_JbLCukXg/videos)
+- [BoostCon](https://www.youtube.com/channel/UC5e__RG9K3cHrPotPABnrwg/videos)
+- [MeetingC++](https://www.youtube.com/channel/UCJpMLydEYA08vusDkq3FmjQ/videos)
+- [PacificC++](https://www.youtube.com/channel/UCrRR5mU5aqvtZAuEGYfdTjw/videos)
 
 ### Blogs
 - [Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/)  
