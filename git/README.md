@@ -12,13 +12,15 @@
 ## Favourites
 <!----------------------------------------------------------------------------->
 Listing favourite commands as a cheatsheet.
+Note that some of these are custom commands added to the git configuration.
+These are marked with `(!)`
 ``````
-git commit --amend
-git checkout -b <name>
-git glog
-gitk --all
-git rebase -i <loc>^
-git gc --auto
+    git commit --amend
+    git checkout -b <name>
+(!) git glog
+    gitk --all
+    git rebase -i <loc>^
+    git gc --auto
 ``````
 
 <!---------------------------------------------------------><a id="content"></a>
@@ -26,7 +28,7 @@ git gc --auto
 <!----------------------------------------------------------------------------->
 <!-- content -->
 ### Basics
-- [Getting Information]  
+- [Getting Information](./information.md)  
   status, log, diff, describe
 - [Branching and Merging]
 - [Moving around]
