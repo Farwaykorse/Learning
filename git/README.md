@@ -68,6 +68,11 @@ These are marked with `(!)`
   creating a small simulation before setting history changing operations loose
   on your repository.
 
+<!-----------------------------------------------------------><a id="tools"></a>
+## Tools
+<!----------------------------------------------------------------------------->
+[posh-git](https://github.com/dahlbyk/posh-git), for MS Powershell
+update: `Update-Module posh-git`
 
 -----------
 [top](#top)
