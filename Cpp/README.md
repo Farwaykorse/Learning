@@ -61,6 +61,10 @@ Notes taken while learning C++.
 - [Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/)  
 - []
 
+### Other collections
+- [C++ links by MattPD](https://github.com/MattPD/cpplinks)
+  - [Learning and taching](https://github.com/MattPD/cpplinks/blob/master/learning_teaching.md)
+- [Stack Overvlow: The Definitieve C++ Book Guide and List](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
 
 -----------
 [top](#top)
