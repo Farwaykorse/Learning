@@ -36,7 +36,7 @@ Notes taken while learning C++.
 
 ### Courses
 - [MVA - C++: A General Purpose Language and Library Jump Start](https://mva.microsoft.com/en-US/training-courses/c-a-general-purpose-language-and-library-jump-start-8251)  
-  By Kat Gregory and James McNellis. It's a little older (2013) but a really
+  By Kate Gregory and James McNellis. It's a little older (2013) but a good
   course to start with.
 <!-- edx (?) -->
 
@@ -59,12 +59,11 @@ Notes taken while learning C++.
 
 ### Blogs
 - [Visual C++ Team Blog](https://blogs.msdn.microsoft.com/vcblog/)  
-- []
 
 ### Other collections
 - [C++ links by MattPD](https://github.com/MattPD/cpplinks)
   - [Learning and taching](https://github.com/MattPD/cpplinks/blob/master/learning_teaching.md)
-- [Stack Overvlow: The Definitieve C++ Book Guide and List](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
+- [Stack Overflow: The Definitive C++ Book Guide and List](https://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list)
 
 -----------
 [top](#top)
