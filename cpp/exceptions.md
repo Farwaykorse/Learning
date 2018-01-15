@@ -20,12 +20,12 @@
   - [Catching](#catching)
   - [Lippincott functions](#lippincott)
 <!--
-- formatting strategie
-- prefenting performance hits?
+- formatting strategies
+- preventing performance hits?
 - logging
 - ? add file and line to message?
 - interfacing between different strategies
-  occuring with libraries,  e.g. the cmath std library
+  occurring with libraries,  e.g. the cmath std library
   error-codes <-> exceptions
 -->
 - [Open Questions](#questions)  
@@ -43,8 +43,9 @@ Some general guidelines, commonly used for exception handling.
 - Throw by Value; Catch by (const) reference.  
   Throwing by value, because the sender will be destructed.  
   Catching by reference retains ownership (RAII) of the exception object,
-  without unnecesary copying when rethrowing.  
-  And thrown objects are not sliced when catched as it base class.
+  without unnecessary copying when rethrowing.  
+  Important when rethrowing, is that the objects are not sliced when caught as
+  its base class.
 - Design your error-handling strategy around invariants.  
   An *invariant* must always be true.
   Used to describe a state (of an object) at a given point in the execution.
@@ -61,9 +62,9 @@ Based on:
 Programming errors should be caught, where possible, by assertions.
 Use exceptions for external errors, where the current code has no control over.
 When:
-1. precondition of a functions callees' can't be met
-2. postconditions of a function can't be met
-3. invariant where responsible for can't be maintained
+1. A precondition of a functions callees can not be met.
+2. A postconditions of a function can not be met.
+3. An invariant where responsible for can not be maintained.
 
 Code that could cause an error is responsible for detecting and reporting it.
 Callers are responsible for meeting preconditions of its callees.
@@ -77,7 +78,7 @@ interfaces are concerned with non-local error handling issues."
 #### Guarantees to give for the state of a program
 The exception safety model as used in the STL.  
 Before a `throw`, all modified objects must be placed in a 'valid' state.
-To allow continued opperation and recovery.
+To allow continued operation and recovery.
 
 **Basic**: For all operations. Ensure the program ends up in a valid state.
 No resource leaks and basic invariants are maintained.  
@@ -87,14 +88,14 @@ handles the deallocation.
 or the intended target state.  
 Strategy: perform all the work that might emit an exception to the side and
 only when you know it has succeeded, commit and modify the program state using
-nonthrowing operations only. (eg. `std::swap()`)  
-**Nofail**: Basic + An operation can never fail.
+nonthrowing operations only. (e.g. `std::swap()`)  
+**No fail**: Basic + An operation can never fail.
 (Required for destructors, deallocation and swap functions.)
 Any exception thrown has to be caught and handled in the function.
 
 Every function should provide the strongest guarantee it can, without penalizing
 code that doesn't need the guarantee.
-And at the very least the basic quarantee needs to be ensured, anything else is
+And at the very least the basic guarantee needs to be ensured, anything else is
 a bug.
 
 
@@ -122,7 +123,7 @@ To specify if a function can throw an exception.
 Effect: If a function declared `noexcept` throws `std::terminate()` is called.
 
 Since C++17 part of the type-system (but not the function signature).
-<!-- concequences? -->
+<!-- consequences? -->
 
 Advantages:
 - Helps understanding the exception behaviour, when reading the code.
@@ -131,7 +132,7 @@ Advantages:
   functions can throw.
 
 Disadvantages: 
-- Overusing or forgetting to reevaluate after edits can result in a crash
+- Overusing or forgetting to re-evaluate after edits can result in a crash
   (termination) for an exception that could have been handled.
 - Removing `noexcept` from a function type breaks the contract with its users.
   Although throwing an unhandled exception could result in the same problem
@@ -153,12 +154,12 @@ When to use:
   Use at least `noexcept(true)` for these, to help find them later, or use a
   macro variable to control its operation.
   Add a comment to the top of the function what exceptions can be thrown and why
-  termination is prefered.
+  termination is preferred.
 - For functions that are conditionally throwing.
-  The `noexcept` specifier can depend on a constant boolean expression,
+  The `noexcept` specifier can depend on a constant Boolean expression,
   such as: `noexcept(std::is_pod_v<T>)`.  
   Use the `noexcept` operator to test a function and any operation for having a
-  noexcept specifier: `noexcept(noexcept(f(a, b)))`.  
+  `noexcept` specifier: `noexcept(noexcept(f(a, b)))`.  
   *Note*: the `noexcept` operator can be used in unit tests with `static_assert` 
   to find accidental regressions.
 - *Note*: `constexpr` functions can only throw when evaluated at run time.
@@ -178,15 +179,15 @@ the call chain.
 Until it meets a catch handler for the given object type.
 
 These exception objects must represent the logical reason for the throw.
-The main purpose is handeling the error, not identification of the code that
+The main purpose is handling the error, not identification of the code that
 noticed the problem.
 
 - Throw custom objects, not build-in types, to make use of the type system to
   identify the error.
   Specific errors can be caught, and a general handler for a category can catch
   by the parent type.
-- Prefere throwing instances of classes derived from the std::exception class.
-  This allows catching by these when exeptions cross subsystem boundaries.
+- Prefer throwing instances of classes derived from the `std::exception` class.
+  This allows catching by these when exceptions cross subsystem boundaries.
 
 Example:
 ````
@@ -215,7 +216,7 @@ The standard library exception categories:
     [*Note* 1](#throw_note_1)
 - `std::logic_error` logical violations of preconditions or class invariants.
   These are bugs that should be fixed, or caught at the source.
-  Or if the case, propagated up to where can be determined if it is a runttime
+  Or if the case, propagated up to where can be determined if it is a runtime
   error. Such that it can be handled at the source.
   - `std::invalid_argument` invalid arguments.
   - `std::length_error` exceeding maximum allowed size for an object, as
@@ -231,7 +232,7 @@ The standard library exception categories:
 `<system_error>`
 - `std::system_error` (derived from `std::runtime_error`).
   Associated with OS interfacing, such as the constructor of
-  `std::thread`, to report a platform dependend `std::error_code`.
+  `std::thread`, to report a platform dependent `std::error_code`.
 `<optional>`
 - `std::bad_optional_access` (derived from `std::exception`)
 `<variant>`
@@ -254,7 +255,7 @@ The standard library exception categories:
 <!-------------------------------------------------------><a id="try-catch"></a>
 ## The `try`-`catch` block
 <!----------------------------------------------------------------------------->
-There is no need to place a try-catch block arround every operation that might
+There is no need to place a try-catch block around every operation that might
 fail.
 
 Track what exceptions any called function might throw.  
@@ -262,9 +263,9 @@ Track what exceptions any called function might throw.
 For now I haven't found anything to help in this besides manual checking and
 documenting.
 
-Concider a `try`-`catch` block at the top of the failing task,
-where a decission is made on how to execute the task.
-I.e. not where the error occures, but where a decission was made that led to
+Consider a `try`-`catch` block at the top of the failing task,
+where a decision is made on how to execute the task.
+I.e. not where the error occurs, but where a decision was made that led to the
 failing operation.
 
 *Note*: everything between the `throw` and `catch` will be destructed.
@@ -273,11 +274,11 @@ failing operation.
 ### Catching
 
 **Only** catch an exception if it can be handled, or at least evaluated, in
-a meaningfull way.
-- If there is different strategy to achive the intended result, try it.
+a meaningful way.
+- If there is different strategy to achieve the intended result, try it.
   But make sure it doesn't end up in an unending loop, and the alternative
   would be sensible.  
-  And only if the information required for the decission is available.
+  And only if the information required for the decision is available.
 - When an exception can't be handled,
   but a more specific problem description is available,
   a new more specific exception can be thrown.
@@ -294,8 +295,8 @@ the default
 if you want to edit something in e
 -->
 <!-- `catch (...)` Catch All
-handle everything, and don't come back if you want to ensure noexcept
-throw something here, but know it is un unknown error ...
+Handle everything, and don't come back if you want to ensure `noexcept`
+Throw something here, but know it is an unknown error ...
 -->
 
 <!-- Rethrowing -->
@@ -307,13 +308,13 @@ throw something here, but know it is un unknown error ...
   type as defined for the variable `error_var`.
   -->
 
-<!-- catch all in main() only usefull if you do some logging -->
+<!-- catch all in main() only useful if you do some logging -->
 
 
 <!------------------------------------------------------><a id="lippincott"></a>
 ### Lippincott functions
 <!----------------------------------------------------------------------------->
-<!--- Named by Jon Kalb, after Lisa Lippincott, who tought him the technique.-->
+<!--- Named by Jon Kalb, after Lisa Lippincott, who taught him the technique.-->
 - Jason Turner. *Lippincott functions* (2017), [C++ weekly, episode 91](https://youtu.be/-amJL3AyADI)
 - Nicolas Guillemot.
   *Using a Lippincott Function or Centralized Exception Handling* (2013),
@@ -323,7 +324,7 @@ foo lippincott()
 {
   try
   {
-    throw; // lippincott: pick up the exception.
+    throw; // Pick up the exception.
   }
   catch (const MyException&)
   {
@@ -343,7 +344,7 @@ foo function()
   }
   catch (...)
   {
-    return lippincoth();
+    return lippincott();
   }
 }
 ``````
@@ -352,12 +353,12 @@ foo function()
   function.
   Moving the rarely executed error-handling code out.
   - Might improve readability of the normal code execution path.
-  - Better `inline` decissions can be made for shorter functions.
-    Especially since error handling should be a rare occurance for which
+  - Better `inline` decisions can be made for shorter functions.
+    Especially since error handling shouldxbe a rare occurrence for which
     inlineing is not beneficial.
-- The `noecept` specifier can be added on both the calling and lippincott
+- The `noexcept` specifier can be added on both the calling and Lippincott
   function, **if** it handles **all** errors, without rethrowing.
-- The `[[noreturn]]` attribute should be used on the lippincott function,
+- The `[[noreturn]]` attribute should be used on the Lippincott function,
   **if** it **always** rethrows.
   <!-- Sample
 `````
@@ -373,7 +374,7 @@ foo function()
 ## Open Questions
 <!----------------------------------------------------------------------------->
 - [`noexcept`](#noexcept)
-  Noexcept is part of the type-system since C++17. What are the consequences?
+  `noexcept` is part of the type-system since C++17. What are the consequences?
 <!--- using noexcept(expression) with `if constexpr (..)` ?? -->
 - What to do with potential errors thrown by complex algorithm implementations.
   Like for `operator==` on a `std::vector`?  
