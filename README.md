@@ -22,8 +22,8 @@ change and potentially anything could be added to this.
 ## Content
 <!----------------------------------------------------------------------------->
 
-- [C++](./cpp/README.md)  
-- [git](./git/README.md)  
+- [C++]()  
+- [git]()  
 
 
 <!--------------------------------------------------------><a id="organize"></a>
