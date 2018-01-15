@@ -5,11 +5,11 @@
 <!-- introduction -->
 These pages contain documentation, notes, ideas, strategies and examples,
 created while studying topics of personal interest.  
-All written in English <!-- for now --> with consistant formatting in markdown
+All written in English <!-- for now --> with consistent formatting in markdown
 to be usable both from the web and in plain-text.
 
-The main focus is (for now) on programming and related content, but this can
-change and in potential anything could be added to this.
+The focus is (for now) on programming and related content, but this can
+change and potentially anything could be added to this.
 
 ##### TOC #####
 - [Content](#content)  
@@ -52,12 +52,12 @@ content, move it to its own page and link to it.
     - other; prefer placing these between ` `` `
 - Start with a header, introduction and table of contents (TOC).
 - End with a horizontal line and a link to the top of the document.
-- Mark headers with continues comment `<!------>` bars, over the full 80 chars.
+- Mark headers with continuous comment `<!------>` bars, over the full 80 chars.
 - Headers:
     - Level 1 `#` only for the document title
     - Level 2 `##` for headers in the document  
       comment bars above and below.
-    - Level 3 `###` and more for subtiltes and internal headers.  
+    - Level 3 `###` and more for subtitles and internal headers.  
       When important, only a comment bar with anchor id above.
     - Give each header a locally unique anchor id (in the bar)
     - Add each header to the TOC.
@@ -66,12 +66,13 @@ content, move it to its own page and link to it.
 - Linking other files?
 - Linking to relevant documents?? where?
 - External links | references
+    - Style? APA?
     - when inline?
     - inline formatting?
-    - seperate links section? Wikipedia style?
+    - separate links section? (Wikipedia style)
     - differentiate between direct links (page) and general links (website)
 - Remarks?? Notes??
-- Todo | planning to write about
+- To-do | planning to write about
 - ...
 -->
 
@@ -110,21 +111,22 @@ Commits are cherry-picked and collated from the other branches.
 
 ### Latest branch
 Partial documents and first ideas can all go into the `latest` branch.  
-It is a branch allowing for rough drafts, todo's and polishing.
-Changes are commited and pushed often, serving as remote backups.  
+It is a branch allowing for rough drafts, to-do's and polishing.
+Changes are committed and pushed often, serving as remote backups.  
 **Try** for once change per commit, to reduce conflicts.
 Single typo commits are fine. Expect a a messy history.  
 **Rewriting history is NOT allowed!** To support use on multiple machines.
 
 ### Other branches
-All other branches are concidered unstable. These can be used as intermediate
+All other branches are considered unstable. These can be used as intermediate
 branches and for experimentation.
 
 ### Breaking history
 Potentially the `latest` and `master` branch might be deprecated and replaced
 with cleaner versions.
-These will use a different name.
-This would break loose any tracking branches, but shouldn't break the history.
+These will then use a different name.
+This would break the connection whith any tracking branches, but shouldn't
+break the history.
 Depending on the motivation the deprecated versions might be removed from
 the public repository.
 
@@ -136,7 +138,7 @@ reference to reuse and improve.
 
 Any questions, idea's, criticism, etc. are welcome.
 Through tickets, pull-requests or any other type of communication.
-Just be aware, that no promisses are made about acception, anwering or retaining
+Just be aware, that no promises are made about accepting, answering or retaining
 the provided content.
 
 <!---------------------------------------------------------><a id="license"></a>
