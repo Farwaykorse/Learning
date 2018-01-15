@@ -19,6 +19,7 @@
   - How to find what exceptions can propagate to where?
   - [Catching](#catching)
   - [Lippincott functions](#lippincott)
+<!--
 - formatting strategie
 - prefenting performance hits?
 - logging
@@ -26,6 +27,7 @@
 - interfacing between different strategies
   occuring with libraries,  e.g. the cmath std library
   error-codes <-> exceptions
+-->
 - [Open Questions](#questions)  
 
 
@@ -389,7 +391,9 @@ foo function()
 - [CppReference, Error handling](http://en.cppreference.com/w/cpp/error)
 - [CppReference, Exceptions](http://en.cppreference.com/w/cpp/language/exceptions)
 - [CppReference, Math error handling](http://en.cppreference.com/w/cpp/numeric/math/math_errhandling)
-
+- Stroustrup, B. *The C++ Programming Language* 4th edition  
+  Chapter 13 *Exception Handling*  
+  Chapter 30.4 *Standard-Library Overview, Error Handling*
 
 -----------
 [top](#top)
