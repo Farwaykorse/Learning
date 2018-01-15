@@ -113,7 +113,7 @@ Commits are cherry-picked and collated from the other branches.
 Partial documents and first ideas can all go into the `latest` branch.  
 It is a branch allowing for rough drafts, to-do's and polishing.
 Changes are committed and pushed often, serving as remote backups.  
-**Try** for once change per commit, to reduce conflicts.
+**Try** for one change per commit, to reduce conflicts.
 Single typo commits are fine. Expect a a messy history.  
 **Rewriting history is NOT allowed!** To support use on multiple machines.
 
